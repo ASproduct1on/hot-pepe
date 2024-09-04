@@ -1,38 +1,252 @@
-.App {
-  text-align: center;
+/* App.css или index.css */
+@font-face {
+	font-family: 'BN Slabby Bold';
+	src: url('./assets/fonts/BNSlabbyBold.woff') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@media screen and (min-width: 960px) {
+	.App {
+		background-image: url('./assets/images/bg.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between; /* Разделяем пространство между элементами */
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.highlight {
+		color: #ffb9b9; /* Цвет для слова "TRON" */
+	}
+
+	.logo {
+		background-color: #fb0909;
+		height: 10%;
+		width: 30%;
+		color: #fff;
+		padding: '10px';
+		font-weight: 'bold';
+		font-size: '24px';
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'BN Slabby Bold', sans-serif;
+		font-weight: bold;
+		font-size: 2.4vw;
+		position: absolute;
+		top: 10%;
+		left: 5%;
+		border-radius: 5px;
+		transform: rotate(-2.07deg);
+		transform-origin: top left;
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 5px;
+			background-color: #fff;
+			height: 100%;
+			font-weight: bold;
+			border-radius: 5%;
+			color: #f3142e;
+		}
+	}
+
+	.toolbar-icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #a55656;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 2.4vw;
+		position: absolute;
+		top: 10%;
+		right: 5%;
+		border-radius: 5px;
+		transform: rotate(2.07deg);
+		transform-origin: top left;
+		.icon {
+			margin: 0 10px;
+			cursor: pointer;
+			img {
+				width: 3vh;
+				height: 3vh;
+			}
+		}
+	}
+
+	.pepe {
+		position: absolute;
+		height: 65vh;
+		top: 28%;
+		left: 25%;
+	}
+
+	.content {
+		position: absolute;
+		right: 5%;
+		bottom: 12%;
+		text-align: left; /* Выровнять текст по правому краю */
+		max-width: 35%; /* Ограничение ширины текста */
+	}
+
+	.title {
+		font-family: 'BN Slabby Bold', sans-serif;
+		font-weight: bold;
+		font-size: 2.4vw;
+		color: #ffffff;
+		margin-bottom: 20px;
+	}
+
+	.subtitle {
+		font-family: 'BN Slabby Bold', sans-serif;
+		font-weight: 500;
+		font-size: 1.6vw;
+		color: #ffffff;
+		margin-bottom: 30px;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: left;
+		gap: 3%;
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	.button {
+		font-size: 2.4vw;
+		height: 56px;
+		width: 46%;
+		margin-top: 20px;
+		font-family: 'BN Slabby Bold', sans-serif;
+		font-weight: 500;
+		color: #ad4444;
+		background-color: #ffffff;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		text-transform: uppercase;
+		display: inline-flex;
+		justify-content: center; /* center the content horizontally */
+		align-items: center;
+	}
+
+	.button-alt {
+		background-color: #ffcccc;
+		color: #df4c49;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width: 960px) {
+	.App {
+		margin: 0;
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		color: #fff;
+		background: url('./assets/images/bg2.png') no-repeat center center fixed;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		gap: 20px;
+		.pepe {
+			position: absolute;
+			top: 35%;
+			left: 20%;
+			width: 80%;
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+	.logo {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.toolbar-icons {
+		position: relative;
+		display: flex;
+		justify-content: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+		gap: 15px;
+		margin-bottom: 20px;
+		text-align: center;
+		background-color: none;
+		z-index: 10;
+		.icon {
+			margin: 0 10px;
+			cursor: pointer;
+			img {
+				width: 5vh;
+				height: 5vh;
+			}
+		}
+	}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+	.header {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 
-.App-link {
-  color: #61dafb;
-}
+	.main-content {
+		text-align: center;
+		z-index: 10;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between; /* Центрируем контент по вертикали */
+		align-items: center;
+		gap: 20px; /* Пространство между элементами */
+	}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	.text-content {
+		margin: 20px 0;
+	}
+
+	.title {
+		font-family: 'BN Slabby Bold', sans-serif;
+		font-size: 3vh;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		color: #ffb9b9;
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	.button,
+	.button-alt {
+		font-family: 'BN Slabby Bold', sans-serif;
+		background-color: #ffffff;
+		color: #ad4444;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		font-size: 1.2rem;
+		border-radius: 5px;
+		width: 90%;
+		margin-bottom: 10px;
+	}
+
+	.button-alt {
+		background-color: #ffcccc;
+	}
 }
